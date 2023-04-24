@@ -1,0 +1,272 @@
+/* GLOBAL CSS - START */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-flex-direction: column; /* TWEENER - IE 10 */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1,
+p,
+span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 400; 
+    margin: 0;
+}
+
+.activeText:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%) !important;
+}
+/* GLOBAL CSS - END */
+
+/* MAIN ELEMENT CSS - START */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+    width: 85vw;
+    height: 80vh;
+    max-width: 330px;
+    max-height: 550px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 20px;
+}
+
+.card > * {
+    width: 85%;
+}
+
+    /* -- Card Preview Image */
+    .img-preview {
+        height: 50%;
+        border-radius: 10px;
+        background: url(./images/image-equilibrium.jpg);
+        background-size: cover;
+    }
+
+    .img-overlay {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .img-overlay > img {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .img-overlay:hover {
+        background-color: hsla(178, 100%, 50%, 50%);
+    }
+
+    .img-overlay:hover > img,
+    .img-overlay > img:hover {
+        display: flex;
+    }
+
+    /* -- Card Details */
+    .details {
+        justify-content: space-between;
+        height: 29%;
+        border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+
+    .details > * {
+        width: 100%;
+    }
+
+    .details > h1 {
+        color: hsl(0, 0%, 100%);
+        font-weight: 600;
+        font-size: 1.5em;
+        align-self: flex-start;
+    }
+
+    .details > h1:hover {
+        cursor: pointer;
+        color: hsl(178, 100%, 50%);
+    }
+
+    .details > p {
+        color: hsl(215, 51%, 70%);
+        font-size: 1em;
+        line-height: 1.6;
+        font-weight: 300;
+    }
+
+    .price-and-timeleft {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 5%;
+    }
+
+    .price-and-timeleft > div {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 40%;
+    }
+
+    .price-and-timeleft > div:first-child {
+        justify-content: flex-start;
+    }
+
+    .price-and-timeleft > div:last-child {
+        justify-content: flex-end;
+    }
+
+    .price-and-timeleft > div > img {
+        padding-right: 5%;
+    }
+
+    .price-and-timeleft > div > p {
+        font-size: 14px;
+    }
+
+    #nft-price {
+        color: hsl(178, 100%, 50%);
+        font-weight: 600;
+    }
+
+    #time-left {
+        color: hsl(215, 51%, 70%);
+    }
+
+    /* -- Card Creator */
+    .creator {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .creator > img {
+        width: 10%;
+        min-width: 30px;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+        margin-right: 5%;
+    }
+
+    .creator > p {
+        color: hsl(215, 51%, 70%);
+        font-size: 14px;
+    }
+
+    #creator-name {
+        color: hsl(0, 0%, 100%);
+        font-size: 14px;
+    }
+
+
+
+/* MAIN ELEMENT CSS - END */
+
+/* FOOTER Element - START */
+/* not part of the challenge */
+.attribution {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+
+.attribution > * {
+    font-size: 0.75em;
+    margin: 0 5px;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+.rate {
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: rgb(155, 205, 238);
+    margin: 0 2px;
+    border-radius: 50%;
+}
+
+.rate-lit {
+    background-color: rgb(81, 140, 180);
+}
+
+.separator {
+    display: inline-block;
+    
+    border: solid 2px #597175;
+}
+
+@media only screen and (min-width: 881px) {
+    .text-cutter {
+        display: none;
+    }
+
+    .attribution * {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .attribution * {
+        font-size: 0.75em;
+    }
+
+    .text-cutter {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .attribution {
+        flex-direction: row;
+    }
+    
+    .separator {
+        width: 0;
+        min-height: 15px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .attribution * {
+        font-size: 0.5em;
+    }
+
+    .separator {
+        width: 30px;
+        height: 0;
+        margin: 3px 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .attribution {
+        display: none;
+    }
+}
+/* FOOTER Element - END */

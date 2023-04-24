@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container wrapper">
+      <div class="container card">
+
+        <div class="img-preview">
+          <div class="container img-overlay">
+            <img src="./images/icon-view.svg" alt="icon-view">
+          </div>
+        </div>
+
+        <div class="container details">
+          <h1 class="activeText">Equilibrium #3429</h1>
+
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+
+          <div class="container price-and-timeleft">
+            <div class="container price">
+              <img src="./images/icon-ethereum.svg" alt="icon-eth">
+              
+              <p id="nft-price">0.041 ETH</p>
+            </div>
+
+            <div class="container time">
+              <img src="./images/icon-clock.svg" alt="icon-clock">
+
+              <p id="time-left">3 days left</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container creator">
+          <img src="./images/image-avatar.png" alt="img-creator-profile">
+
+          <p>Creation of <span class="activeText" id="creator-name">Jules Wyvern</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- not part of the challenge-->
+  <footer class="attribution">
+    <span>Challenge by</span>
+    <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U" target="_blank">Frontend Mentor</a>
+    
+    <div class="separator"></div>
+    
+    <a href="./design/mobile-design.jpg" target="_blank">Design Guide - Mobile</a>
+    
+    <div class="separator"></div>
+
+    <a href="./design/desktop-design.jpg" target="_blank">Design Guide - Desktop</a>
+    
+    <div class="separator"></div>
+    
+    <div class="rating">
+      <span>Difficulty: Newbie</span>
+      <br class="text-cutter">
+      <span>[</span>
+      <div class="rate rate-lit" id="rate-newbie"></div>
+      <div class="rate" id="rate-junior"></div>
+      <div class="rate" id="rate-intermediate"></div>
+      <div class="rate" id="rate-advance"></div>
+      <div class="rate" id="rate-guro"></div>
+      <span>]</span>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <span>Coded by</span>
+    <a href="https://github.com/EcePJD">Patrick James O. De Leon</a>
+  </footer>
+</body>
+</html>
